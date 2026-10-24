@@ -37,8 +37,13 @@ export default function PlaneItem({
             <img src={urlPromotional} alt={nameBrief} width="300" onError={(e) => onErrorImg(e)} />
             <p>Реальна модель:</p>
             {/* <img src={urlActual} alt={nameBrief} width="600" /> */}
-            {urlActual.map((image) =>
-                <img src={image} alt={nameBrief} width="300" />
+            {urlActual.map((image, index) =>
+                <img
+                    key={index}
+                    src={image}
+                    alt={nameBrief}
+                    width="300"
+                />
             )}
             <br />
             <button type="button">Додати до кошику</button>
