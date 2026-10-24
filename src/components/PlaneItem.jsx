@@ -36,7 +36,10 @@ export default function PlaneItem({
             <p>Рекламна модель:</p>
             <img src={urlPromotional} alt={nameBrief} width="300" onError={(e) => onErrorImg(e)} />
             <p></p>
-            <img src={urlActual} alt={nameBrief} width="600" />
+            {/* <img src={urlActual} alt={nameBrief} width="600" /> */}
+            {urlActual.map((image) =>
+                <img src={image} alt={nameBrief} width="300" />
+            )}
             <br />
             <button type="button">Додати до кошику</button>
         </>
