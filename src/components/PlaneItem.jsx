@@ -35,7 +35,7 @@ export default function PlaneItem({
             <p>Опис: {infoDescription}</p>
             <p>Рекламна модель:</p>
             <img src={urlPromotional} alt={nameBrief} width="300" onError={(e) => onErrorImg(e)} />
-            <p></p>
+            <p>Реальна модель:</p>
             {/* <img src={urlActual} alt={nameBrief} width="600" /> */}
             {urlActual.map((image) =>
                 <img src={image} alt={nameBrief} width="300" />
