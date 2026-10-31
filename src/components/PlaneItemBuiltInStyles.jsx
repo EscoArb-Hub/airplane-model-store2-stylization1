@@ -121,7 +121,7 @@ export default function PlaneItem({
                 }}
             >
                 Додати до кошику
-            </button>
+                </button>
         </>
     )
 };
