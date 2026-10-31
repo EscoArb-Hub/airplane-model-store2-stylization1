@@ -21,6 +21,8 @@
   outline: 1px solid red;
 }
 
+
+/** backgroundColor: '#ffdb92', // "year" до 1946 */
 .planeItem {
   display: grid;
   gap: 12px;
@@ -29,6 +31,15 @@
   outline: 1px solid grey;
 }
 
+/** backgroundColor: '#d2fdbd', // "year"  1946 - 1999 - last */
+.planeItem.last{
+  background-color: #d2fdbd;
+}
+
+/** backgroundColor: '#d6f1ff', // "year" від 2000 - current */
+.planeItem.last.current{
+  background-color: #d6f1ff;
+}
 
 /*? PlaneItemVanillaCSS.jsx*/
 

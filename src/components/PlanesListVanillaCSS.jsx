@@ -2,7 +2,7 @@
 // import PlaneItemBuiltInStyles from "./PlaneItemBuiltInStyles.jsx"  //! вбудовані стилі
 import PlaneItemVanillaCSS from "./PlaneItemVanillaCSS.jsx"
 
-import {getBgColorBuiltInStyles} from "../utils/getBackgroundColor.js"
+import { getBgColorBuiltInStyles } from "../utils/getBackgroundColor.js"
 
 // backgroundColor: '#ffdb92', // "year" до 1946
 // backgroundColor: '#d2fdbd', // "year"  1946 - 1999
@@ -10,11 +10,11 @@ import {getBgColorBuiltInStyles} from "../utils/getBackgroundColor.js"
 
 //! Для визначення кольору фону картки в залежності від значення "year"
 // function getBgColorBuiltInStyles(year) {
-//     // let color = '#ffdb92' 
-//     let color = 'grey' 
-//     // Тут повинна бути логіка умови 5-6 рядки 
+//     // let color = '#ffdb92'
+//     let color = 'grey'
+//     // Тут повинна бути логіка умови 5-6 рядки
 //     if (year < 1946) {
-//         color = '#ffdb92' 
+//         color = '#ffdb92'
 //     }
 //     if (year >= 1946) {
 //         color = '#d2fdbd'
@@ -29,6 +29,23 @@ import {getBgColorBuiltInStyles} from "../utils/getBackgroundColor.js"
 // console.log("result:", result)
 // console.log("getBgColorBuiltInStyles:", getBgColorBuiltInStyles)
 // console.log("getBgColorBuiltInStyles(1945):", getBgColorBuiltInStyles(1945))
+
+//! Для визначення кольору фону картки в залежності від значення "year" - ванільний CSS
+function getBgColorVanillaCSS(year) {
+    let className = "planeItem"
+    // className = className + " last"
+    // className = className + " current"
+
+
+    if (year >= 1946) {
+        className = className + " last"
+    }
+    if (year >= 2000) {
+        className = className + " current"
+    }
+    console.log("className:", className)
+    return className
+}
 
 
 
@@ -57,7 +74,9 @@ export default function PlanesList({ items }) {
                 //     backgroundColor: getBgColorBuiltInStyles(item.info.year),
                 //     outline: "1px solid grey",
                 // }}
-                className="planeItem"
+                // className="planeItem last current"
+                // className={"planeItem last current"}
+                className={getBgColorVanillaCSS(item.info.year)}
             >
                 <PlaneItemVanillaCSS
                     nameBrief={item.name.brief}
