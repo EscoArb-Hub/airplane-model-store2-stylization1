@@ -1,6 +1,35 @@
 // import PlaneItem from "./PlaneItem" //! без стилізації
 import PlaneItemBuiltInStyles from "./PlaneItemBuiltInStyles"  //! вбудовані стилі
 
+import {getBgColorBuiltInStyles} from "../utils/getBackgroundColor.js"
+
+// backgroundColor: '#ffdb92', // "year" до 1946
+// backgroundColor: '#d2fdbd', // "year"  1946 - 1999
+// backgroundColor: '#d6f1ff', // "year" від 2000
+
+//! Для визначення кольору фону картки в залежності від значення "year"
+// function getBgColorBuiltInStyles(year) {
+//     // let color = '#ffdb92' 
+//     let color = 'grey' 
+//     // Тут повинна бути логіка умови 5-6 рядки 
+//     if (year < 1946) {
+//         color = '#ffdb92' 
+//     }
+//     if (year >= 1946) {
+//         color = '#d2fdbd'
+//     }
+//     if (year >= 2000) {
+//         color = '#d6f1ff'
+//     }
+//     console.log("color:", color)
+//     return color;
+// }
+// const result = getBgColorBuiltInStyles(1945)
+// console.log("result:", result)
+// console.log("getBgColorBuiltInStyles:", getBgColorBuiltInStyles)
+// console.log("getBgColorBuiltInStyles(1945):", getBgColorBuiltInStyles(1945))
+
+
 
 export default function PlanesList({ items }) {
     console.log("items", items)
@@ -22,7 +51,8 @@ export default function PlanesList({ items }) {
                     display: "grid",
                     gap: 12,
                     padding: 10,
-                    backgroundColor: '#ffdb92',
+                    // backgroundColor: '#ffdb92',
+                    backgroundColor: getBgColorBuiltInStyles(item.info.year),
                     outline: "1px solid grey",
                 }}
             >
