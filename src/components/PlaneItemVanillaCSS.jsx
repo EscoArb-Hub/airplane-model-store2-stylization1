@@ -2,22 +2,22 @@ import defaultImage from "./default.png" //! Дефолтне зображенн
 
 
 //! Стилі для текстових полів
-const textField = {
-    fontSize: '18px',
-    fontWeight: 700,
-}
+// const textField = {
+//     fontSize: '18px',
+//     fontWeight: 700,
+// }
 
 //! Стилі для значень текстових полів
-const textFieldValue = {
-    fontWeight: 400,
-    fontStyle: "italic",
-}
+// const textFieldValue = {
+//     fontWeight: 400,
+//     fontStyle: "italic",
+// }
 
 //! Стилі для заголовків зображень
-const imageTitles = {
-    textAlign: 'center',
-    color: 'blue'
-}
+// const imageTitles = {
+//     textAlign: 'center',
+//     color: 'blue'
+// }
 
 
 
@@ -42,16 +42,17 @@ export default function PlaneItem({
 }) {
     return (
         <>
-            <h3
-                style={{
-                    marginBottom: 12,
-                    padding: "12px 16px",
-                    fontSize: 32,
-                    textAlign: 'center',
-                    borderRadius: 8,
-                    backgroundColor: "yellow",
-                    color: "blue",
-                }}
+            <h3 
+                // style={{
+                //     marginBottom: 12,
+                //     padding: "12px 16px",
+                //     fontSize: 32,
+                //     textAlign: 'center',
+                //     borderRadius: 8,
+                //     backgroundColor: "yellow",
+                //     color: "blue",
+                // }}
+                className="titleItem"
             >
                 {nameBrief}
             </h3>
@@ -62,21 +63,29 @@ export default function PlaneItem({
                 onError={(e) => onErrorImg(e)}
             />
             {/* <p>Повна назва: {nameFull}</p> */}
-            <p style={textField}>Повна назва: <span style={textFieldValue}>{nameFull}</span></p>
-            <p style={textField}>Тип: <span style={textFieldValue}>{infoType}</span></p>
-            <p style={textField}>Прізвисько: <span style={textFieldValue}>{nameNickname}</span></p>
-            <p style={textField}>Країна виробник: <span style={textFieldValue}>{infoCountry}</span></p>
-            <p style={textField}>Рік випуску: <span style={textFieldValue}>{infoYear}</span></p>
-            <p style={textField}>Актуальність: <span style={textFieldValue}>{infoYear < 2000 ? "минуле століття" : "сучасний"}</span></p>
-            <p style={textField}>Ціна: <span style={textFieldValue}>{infoPrice}</span></p>
-            <p style={textField}>Опис: <span style={textFieldValue}>{infoDescription}</span></p>
-            <p style={imageTitles}>Рекламна модель:</p>
+            <p
+                // style={textField}
+                className="textField"
+            >
+                Повна назва: <span
+                    // style={textFieldValue}
+                    className="textFieldValue"
+                >
+                    {nameFull}</span></p>
+            <p className="textField">Тип: <span className="textFieldValue">{infoType}</span></p>
+            <p className="textField">Прізвисько: <span className="textFieldValue">{nameNickname}</span></p>
+            <p className="textField">Країна виробник: <span className="textFieldValue">{infoCountry}</span></p>
+            <p className="textField">Рік випуску: <span className="textFieldValue">{infoYear}</span></p>
+            <p className="textField">Актуальність: <span className="textFieldValue">{infoYear < 2000 ? "минуле століття" : "сучасний"}</span></p>
+            <p className="textField">Ціна: <span className="textFieldValue">{infoPrice}</span></p>
+            <p className="textField">Опис: <span className="textFieldValue">{infoDescription}</span></p>
+            <p className="imageTitles">Рекламна модель:</p>
             <img
                 src={urlPromotional}
                 alt={nameBrief}
                 onError={(e) => onErrorImg(e)}
             />
-            <p style={imageTitles}>Реальна модель:</p>
+            <p className="imageTitles">Реальна модель:</p>
             {/* <img src={urlActual} alt={nameBrief} width="600" /> */}
             <div
                 style={{
@@ -87,41 +96,44 @@ export default function PlaneItem({
                     borderRadius: 8,
                     backgroundColor: "gray",
                 }}
+                className="actualImageBox"
             >
                 {urlActual.map((image, index) =>
-                    <img
+                    <img 
                         key={index}
                         src={image}
                         alt={nameBrief}
-                        style={{
-                            maxWidth: "calc((100% - 10px) / 2)",
-                            borderRadius: 4,
-                        }}
+                        // style={{
+                        //     maxWidth: "calc((100% - 10px) / 2)",
+                        //     borderRadius: 4,
+                        // }}
+                        className="actualImage"
                     />
                 )}
             </div>
             <br />
-            <button
+            <button 
                 type="button"
-                style={{
-                    width: "70%",
-                    margin: "20px auto",
-                    padding: "16px 32px",
-                    display: "inline-block",
-                    alignItems: "center",
-                    fontFamily: 'Franklin Gothic Medium, Arial Narrow',
-                    fontWeight: 700,
-                    fontSize: "1.5rem",
-                    borderRadius: "12px",
-                    color: "#ffffff",
-                    cursor: "pointer",
-                    backgroundColor: "#008080",
-                    textShadow: "1px 1px 2px rgba(0, 0, 0, 0.4), 2px 2px 4px rgba(0, 0, 0, 0.2), 4px 4px 8px rgba(0, 0, 0, 0.1)",
-                    boxShadow: "inset 0 0 16px 8px rgba(0, 0, 0, 0.3), 0 8px 16px rgba(0, 0, 0, 0.9)",
-                }}
+                // style={{
+                //     width: "70%",
+                //     margin: "20px auto",
+                //     padding: "16px 32px",
+                //     display: "inline-block",
+                //     alignItems: "center",
+                //     fontFamily: 'Franklin Gothic Medium, Arial Narrow',
+                //     fontWeight: 700,
+                //     fontSize: "1.5rem",
+                //     borderRadius: "12px",
+                //     color: "#ffffff",
+                //     cursor: "pointer",
+                //     backgroundColor: "#008080",
+                //     textShadow: "1px 1px 2px rgba(0, 0, 0, 0.4), 2px 2px 4px rgba(0, 0, 0, 0.2), 4px 4px 8px rgba(0, 0, 0, 0.1)",
+                //     boxShadow: "inset 0 0 16px 8px rgba(0, 0, 0, 0.3), 0 8px 16px rgba(0, 0, 0, 0.9)",
+                // }}
+                className="planeButton"
             >
                 Додати до кошику
-                </button>
+            </button>
         </>
     )
 };

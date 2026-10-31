@@ -35,27 +35,29 @@ import {getBgColorBuiltInStyles} from "../utils/getBackgroundColor.js"
 export default function PlanesList({ items }) {
     console.log("items", items)
     return <ul
-        style={{
-            marginLeft: 10,
-            marginRight: 10,
-            padding: 10,
-            display: "grid",
-            gridTemplateColumns: 'repeat(auto-fit, minmax(445px, 1fr))',
-            gap: 32,
-            outline: "1px solid red",
-        }}
+        // style={{
+        //     marginLeft: 10,
+        //     marginRight: 10,
+        //     padding: 10,
+        //     display: "grid",
+        //     gridTemplateColumns: 'repeat(auto-fit, minmax(445px, 1fr))',
+        //     gap: 32,
+        //     outline: "1px solid red",
+        // }}
+        className="planesList"
     >
         {items.map((item, index) =>
             <li
                 key={item.id}
-                style={{
-                    display: "grid",
-                    gap: 12,
-                    padding: 10,
-                    // backgroundColor: '#ffdb92',
-                    backgroundColor: getBgColorBuiltInStyles(item.info.year),
-                    outline: "1px solid grey",
-                }}
+                // style={{
+                //     display: "grid",
+                //     gap: 12,
+                //     padding: 10,
+                //     // backgroundColor: '#ffdb92',
+                //     backgroundColor: getBgColorBuiltInStyles(item.info.year),
+                //     outline: "1px solid grey",
+                // }}
+                className="planeItem"
             >
                 <PlaneItemVanillaCSS
                     nameBrief={item.name.brief}
