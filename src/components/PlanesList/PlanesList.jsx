@@ -3,7 +3,7 @@
 // import PlaneItemVanillaCSS from "./PlaneItemVanillaCSS.jsx"
 import {PlaneItem} from "../PlaneItem/PlaneItem.jsx"
 
-import { getBgColorBuiltInStyles, getBgColorVanillaCSS } from "../utils/getBackgroundColor.js"
+import { getBgColorBuiltInStyles, getBgColorVanillaCSS } from "../../utils/getBackgroundColor.js"
 
 // backgroundColor: '#ffdb92', // "year" до 1946
 // backgroundColor: '#d2fdbd', // "year"  1946 - 1999
