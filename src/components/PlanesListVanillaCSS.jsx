@@ -2,7 +2,7 @@
 // import PlaneItemBuiltInStyles from "./PlaneItemBuiltInStyles.jsx"  //! вбудовані стилі
 import PlaneItemVanillaCSS from "./PlaneItemVanillaCSS.jsx"
 
-import { getBgColorBuiltInStyles } from "../utils/getBackgroundColor.js"
+import { getBgColorBuiltInStyles, getBgColorVanillaCSS } from "../utils/getBackgroundColor.js"
 
 // backgroundColor: '#ffdb92', // "year" до 1946
 // backgroundColor: '#d2fdbd', // "year"  1946 - 1999
@@ -31,21 +31,21 @@ import { getBgColorBuiltInStyles } from "../utils/getBackgroundColor.js"
 // console.log("getBgColorBuiltInStyles(1945):", getBgColorBuiltInStyles(1945))
 
 //! Для визначення кольору фону картки в залежності від значення "year" - ванільний CSS
-function getBgColorVanillaCSS(year) {
-    let className = "planeItem"
-    // className = className + " last"
-    // className = className + " current"
+// function getBgColorVanillaCSS(year) {
+//     let className = "planeItem"
+//     // className = className + " last"
+//     // className = className + " current"
 
 
-    if (year >= 1946) {
-        className = className + " last"
-    }
-    if (year >= 2000) {
-        className = className + " current"
-    }
-    console.log("className:", className)
-    return className
-}
+//     if (year >= 1946) {
+//         className = className + " last"
+//     }
+//     if (year >= 2000) {
+//         className = className + " current"
+//     }
+//     console.log("className:", className)
+//     return className
+// }
 
 
 
