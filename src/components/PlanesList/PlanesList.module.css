@@ -21,11 +21,13 @@
 }
 
 /** backgroundColor: '#d2fdbd', // "year"  1946 - 1999 - last */
-.planeItem.last {
+.planeItemLast {
+    composes: planeItem;
     background-color: #d2fdbd;
 }
 
 /** backgroundColor: '#d6f1ff', // "year" від 2000 - current */
-.planeItem.last.current {
+.planeItemCurrent {
+    composes: planeItem;
     background-color: #d6f1ff;
 }

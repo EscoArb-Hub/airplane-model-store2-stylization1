@@ -3,7 +3,7 @@
 // import PlaneItemVanillaCSS from "./PlaneItemVanillaCSS.jsx"
 import {PlaneItem} from "../PlaneItem/PlaneItem.jsx"
 
-import { getBgColorBuiltInStyles, getBgColorVanillaCSS } from "../../utils/getBackgroundColor.js"
+import { getBgColorBuiltInStyles, getBgColorVanillaCSS, getBgColorCSSModule } from "../../utils/getBackgroundColor.js"
 
 import css from "./PlanesList.module.css"; //! CSS-модулі
 
@@ -80,7 +80,11 @@ export function PlanesList({ items }) {
                 // className="planeItem last current"
                 // className={"planeItem last current"}
                 // className={getBgColorVanillaCSS(item.info.year)}
-                className={css.planeItem}
+                // className={css.planeItem}
+                // className={css.planeItemLast}
+                // className={css.planeItemCurrent}
+                className={css[getBgColorCSSModule(item.info.year)]}
+
             >
                 <PlaneItem
                     nameBrief={item.name.brief}
