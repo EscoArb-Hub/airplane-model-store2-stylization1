@@ -14,6 +14,8 @@ console.log("planes:", planes)
 
 // import './App.css'; //! Ванільний CSS (Vanilla CSS)'
 
+// import css from "./App.module.css"; //! CSS-модулі
+
 
 // export default function App() {
 export function App() {

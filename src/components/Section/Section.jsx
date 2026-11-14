@@ -1,4 +1,6 @@
-export  function Section({ title, children }) {
+import css from "./Section.module.css"; //! CSS-модулі
+console.log("css:", css)
+export function Section({ title, children }) {
     return (
         <section>
             <h2
@@ -9,7 +11,8 @@ export  function Section({ title, children }) {
                 //     color: "darkred",
                 // }}
 
-                className="title"
+                // className="title"
+                className={css.title}
             >
                 {title}
             </h2>

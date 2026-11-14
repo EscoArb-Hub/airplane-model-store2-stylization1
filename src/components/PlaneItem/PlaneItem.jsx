@@ -1,5 +1,7 @@
 import defaultImage from "./default.png" //! Дефолтне зображення
 
+import css from "./PlaneItem.module.css"; //! CSS-модулі
+
 
 //! Стилі для текстових полів
 // const textField = {
