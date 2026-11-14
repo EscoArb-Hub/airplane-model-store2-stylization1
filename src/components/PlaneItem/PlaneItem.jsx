@@ -54,7 +54,7 @@ export function PlaneItem({
                 //     backgroundColor: "yellow",
                 //     color: "blue",
                 // }}
-                className="titleItem"
+                className={css.titleItem}
             >
                 {nameBrief}
             </h3>
@@ -67,38 +67,38 @@ export function PlaneItem({
             {/* <p>Повна назва: {nameFull}</p> */}
             <p
                 // style={textField}
-                className="textField"
+                className={css.textField}
             >
                 Повна назва: <span
                     // style={textFieldValue}
-                    className="textFieldValue"
+                    className={css.textFieldValue}
                 >
                     {nameFull}</span></p>
-            <p className="textField">Тип: <span className="textFieldValue">{infoType}</span></p>
-            <p className="textField">Прізвисько: <span className="textFieldValue">{nameNickname}</span></p>
-            <p className="textField">Країна виробник: <span className="textFieldValue">{infoCountry}</span></p>
-            <p className="textField">Рік випуску: <span className="textFieldValue">{infoYear}</span></p>
-            <p className="textField">Актуальність: <span className="textFieldValue">{infoYear < 2000 ? "минуле століття" : "сучасний"}</span></p>
-            <p className="textField">Ціна: <span className="textFieldValue">{infoPrice}</span></p>
-            <p className="textField">Опис: <span className="textFieldValue">{infoDescription}</span></p>
-            <p className="imageTitles">Рекламна модель:</p>
+            <p className={css.textField}>Тип: <span className={css.textFieldValue}>{infoType}</span></p>
+            <p className={css.textField}>Прізвисько: <span className={css.textFieldValue}>{nameNickname}</span></p>
+            <p className={css.textField}>Країна виробник: <span className={css.textFieldValue}>{infoCountry}</span></p>
+            <p className={css.textField}>Рік випуску: <span className={css.textFieldValue}>{infoYear}</span></p>
+            <p className={css.textField}>Актуальність: <span className={css.textFieldValue}>{infoYear < 2000 ? "минуле століття" : "сучасний"}</span></p>
+            <p className={css.textField}>Ціна: <span className={css.textFieldValue}>{infoPrice}</span></p>
+            <p className={css.textField}>Опис: <span className={css.textFieldValue}>{infoDescription}</span></p>
+            <p className={css.imageTitles}>Рекламна модель:</p>
             <img
                 src={urlPromotional}
                 alt={nameBrief}
                 onError={(e) => onErrorImg(e)}
             />
-            <p className="imageTitles">Реальна модель:</p>
+            <p className={css.imageTitles}>Реальна модель:</p>
             {/* <img src={urlActual} alt={nameBrief} width="600" /> */}
             <div
-                style={{
-                    display: "flex",
-                    gap: 10,
-                    flexWrap: 'wrap',
-                    padding: "8px",
-                    borderRadius: 8,
-                    backgroundColor: "gray",
-                }}
-                className="actualImageBox"
+                // style={{
+                //     display: "flex",
+                //     gap: 10,
+                //     flexWrap: 'wrap',
+                //     padding: "8px",
+                //     borderRadius: 8,
+                //     backgroundColor: "gray",
+                // }}
+                className={css.actualImageBox}
             >
                 {urlActual.map((image, index) =>
                     <img 
@@ -109,7 +109,7 @@ export function PlaneItem({
                         //     maxWidth: "calc((100% - 10px) / 2)",
                         //     borderRadius: 4,
                         // }}
-                        className="actualImage"
+                        className={css.actualImage}
                     />
                 )}
             </div>
@@ -132,7 +132,7 @@ export function PlaneItem({
                 //     textShadow: "1px 1px 2px rgba(0, 0, 0, 0.4), 2px 2px 4px rgba(0, 0, 0, 0.2), 4px 4px 8px rgba(0, 0, 0, 0.1)",
                 //     boxShadow: "inset 0 0 16px 8px rgba(0, 0, 0, 0.3), 0 8px 16px rgba(0, 0, 0, 0.9)",
                 // }}
-                className="planeButton"
+                className={css.planeButton}
             >
                 Додати до кошику
             </button>

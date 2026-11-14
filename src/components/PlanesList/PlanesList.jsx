@@ -64,7 +64,7 @@ export function PlanesList({ items }) {
         //     gap: 32,
         //     outline: "1px solid red",
         // }}
-        className="planesList"
+        className={css.planesList}
     >
         {items.map((item, index) =>
             <li
@@ -79,7 +79,8 @@ export function PlanesList({ items }) {
                 // }}
                 // className="planeItem last current"
                 // className={"planeItem last current"}
-                className={getBgColorVanillaCSS(item.info.year)}
+                // className={getBgColorVanillaCSS(item.info.year)}
+                className={css.planeItem}
             >
                 <PlaneItem
                     nameBrief={item.name.brief}
