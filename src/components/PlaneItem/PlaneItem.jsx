@@ -1,8 +1,32 @@
 import defaultImage from "./default.png" //! Дефолтне зображення
 
+import { iconSize } from "@/constants/iconSize.js"
+
+// import { SiAnimalplanet } from "react-icons/si";
+// /! Бібліотека react-icons
+import { FaMapMarkerAlt, FaUserAlt, FaCalendarAlt, FaClock } from 'react-icons/fa'; //! Приклад react-icons
+import { AiOutlineFlag, AiOutlineInfoCircle, AiOutlineClockCircle, AiOutlineDollarCircle } from "react-icons/ai";
+import { GiArmoredBoomerang, GiCeremonialMask, GiAirplaneDeparture, GiCommercialAirplane, GiCurlyMask, GiTimeSynchronization } from "react-icons/gi";
+import { CiBadgeDollar, CiGlobe, CiAirportSign1 } from "react-icons/ci";
+import { TbClockHour4Filled } from "react-icons/tb";
+import { FcTrademark } from "react-icons/fc";
+//? nameBrief
+//? nameFull - <FcTrademark /> - Повна назва
+//? type - <GiArmoredBoomerang /> - бумеранг, <GiCommercialAirplane /> - літак- Тип
+//? nickname - <GiCeremonialMask /> маска1, <GiCurlyMask /> маска2  - Прізвисько
+//? country - <AiOutlineFlag /> - прапор, <CiGlobe /> - глобус - Країна виробник
+//? year - <AiOutlineClockCircle /> - годинник - Рік випуску
+//? duration - <TbClockHour4Filled /> - годинник - Тривалість виробництва(в роках)
+//? price - <CiBadgeDollar/> - $, <AiOutlineDollarCircle /> - $ - Ціна
+//? description - <AiOutlineInfoCircle /> - info - Опис
+//? <GiAirplaneDeparture /> - Рекламна модель
+//? <CiAirportSign1 /> - Реальна модель
+
+
 import css from "./PlaneItem.module.css"; //! CSS-модулі
 
-
+console.log("iconSixe:", iconSize)
+// iconSize.xs = 56 
 //! Стилі для текстових полів
 // const textField = {
 //     fontSize: '18px',
@@ -44,7 +68,7 @@ export function PlaneItem({
 }) {
     return (
         <>
-            <h3 
+            <h3
                 // style={{
                 //     marginBottom: 12,
                 //     padding: "12px 16px",
@@ -56,6 +80,10 @@ export function PlaneItem({
                 // }}
                 className={css.titleItem}
             >
+                {/* <SiAnimalplanet
+                    size={60}
+                    color="red"
+                /> */}
                 {nameBrief}
             </h3>
             {/* <img src={urlMain} alt={nameBrief} width="480" /> */}
@@ -69,25 +97,25 @@ export function PlaneItem({
                 // style={textField}
                 className={css.textField}
             >
+                <FcTrademark size={iconSize.md} className={css.icon} />
                 Повна назва: <span
-                    // style={textFieldValue}
                     className={css.textFieldValue}
                 >
                     {nameFull}</span></p>
-            <p className={css.textField}>Тип: <span className={css.textFieldValue}>{infoType}</span></p>
-            <p className={css.textField}>Прізвисько: <span className={css.textFieldValue}>{nameNickname}</span></p>
-            <p className={css.textField}>Країна виробник: <span className={css.textFieldValue}>{infoCountry}</span></p>
-            <p className={css.textField}>Рік випуску: <span className={css.textFieldValue}>{infoYear}</span></p>
-            <p className={css.textField}>Актуальність: <span className={css.textFieldValue}>{infoYear < 2000 ? "минуле століття" : "сучасний"}</span></p>
-            <p className={css.textField}>Ціна: <span className={css.textFieldValue}>{infoPrice}</span></p>
-            <p className={css.textField}>Опис: <span className={css.textFieldValue}>{infoDescription}</span></p>
-            <p className={css.imageTitles}>Рекламна модель:</p>
+            <p className={css.textField}><GiCommercialAirplane size={28} className={css.icon} /> Тип: <span className={css.textFieldValue}>{infoType}</span></p>
+            <p className={css.textField}><GiCurlyMask size={28} className={css.icon} />Прізвисько: <span className={css.textFieldValue}>{nameNickname}</span></p>
+            <p className={css.textField}><CiGlobe size={28} className={css.icon} />Країна виробник: <span className={css.textFieldValue}>{infoCountry}</span></p>
+            <p className={css.textField}><AiOutlineClockCircle size={28} className={css.icon} />Рік випуску: <span className={css.textFieldValue}>{infoYear}</span></p>
+            <p className={css.textField}><GiTimeSynchronization size={28} className={css.icon} />Актуальність: <span className={css.textFieldValue}>{infoYear < 2000 ? "минуле століття" : "сучасний"}</span></p>
+            <p className={css.textField}><AiOutlineDollarCircle size={28} className={css.icon} />Ціна: <span className={css.textFieldValue}>{infoPrice}</span></p>
+            <p className={css.textField}><AiOutlineInfoCircle size={28} className={css.icon} />Опис: <span className={css.textFieldValue}>{infoDescription}</span></p>
+            <p className={css.imageTitles}><GiAirplaneDeparture size={28} className={css.icon} />Рекламна модель:</p>
             <img
                 src={urlPromotional}
                 alt={nameBrief}
                 onError={(e) => onErrorImg(e)}
             />
-            <p className={css.imageTitles}>Реальна модель:</p>
+            <p className={css.imageTitles}><CiAirportSign1 size={28} className={css.icon} />Реальна модель:</p>
             {/* <img src={urlActual} alt={nameBrief} width="600" /> */}
             <div
                 // style={{
@@ -101,7 +129,7 @@ export function PlaneItem({
                 className={css.actualImageBox}
             >
                 {urlActual.map((image, index) =>
-                    <img 
+                    <img
                         key={index}
                         src={image}
                         alt={nameBrief}
@@ -114,7 +142,7 @@ export function PlaneItem({
                 )}
             </div>
             <br />
-            <button 
+            <button
                 type="button"
                 // style={{
                 //     width: "70%",
