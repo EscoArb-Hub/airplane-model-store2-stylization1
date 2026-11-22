@@ -1,5 +1,7 @@
 import css from "./Section.module.css"; //! CSS-модулі
 console.log("css:", css)
+
+
 export function Section({ title, children }) {
     return (
         <section>

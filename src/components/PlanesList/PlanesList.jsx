@@ -1,12 +1,16 @@
 // import PlaneItem from "./PlaneItem" //! без стилізації
 // import PlaneItemBuiltInStyles from "./PlaneItemBuiltInStyles.jsx"  //! вбудовані стилі
 // import PlaneItemVanillaCSS from "./PlaneItemVanillaCSS.jsx"
-import {PlaneItem} from "../PlaneItem/PlaneItem.jsx"
+// import { PlaneItem } from "../PlaneItem/PlaneItem.jsx"
+import { PlaneItem } from "@/components/PlaneItem/PlaneItem.jsx"
 
-import { getBgColorBuiltInStyles, getBgColorVanillaCSS, getBgColorCSSModule } from "../../utils/getBackgroundColor.js"
+
+// import { getBgColorBuiltInStyles, getBgColorVanillaCSS, getBgColorCSSModule } from "../../utils/getBackgroundColor.js"
+import { getBgColorBuiltInStyles, getBgColorVanillaCSS, getBgColorCSSModule } from "@/utils/getBackgroundColor.js"
 
 import css from "./PlanesList.module.css"; //! CSS-модулі
 
+console.log("css:", css)
 // backgroundColor: '#ffdb92', // "year" до 1946
 // backgroundColor: '#d2fdbd', // "year"  1946 - 1999
 // backgroundColor: '#d6f1ff', // "year" від 2000
